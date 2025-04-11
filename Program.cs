@@ -5,11 +5,11 @@ using employees_management.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// var port = Environment.GetEnvironmentVariable("PORT") ?? "5001";
-// builder.WebHost.ConfigureKestrel(options =>
-// {
-//     options.ListenAnyIP(Int32.Parse(port));
-// });
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5001";
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(Int32.Parse(port));
+});
 
 // Convert DATABASE_URL to a PostgreSQL connection string
 

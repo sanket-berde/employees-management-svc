@@ -21,4 +21,4 @@ RUN chmod +x /wait-for.sh
 
 # Run the app after DB is ready
 # CMD ["./wait-for.sh", "postgres:5432", "--", "dotnet", "employees-management.dll"] # Working **
-CMD ["./wait-for.sh", "postgres", "5432", "--", "dotnet", "employees-management.dll"]
+CMD ["/wait-for.sh", "postgres", "5432", "--", "dotnet", "employees-management.dll"]

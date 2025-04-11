@@ -3,4 +3,4 @@ build:
     web: Dockerfile
 
 run:
-  web: ./wait-for.sh postgres 5432 -- dotnet employees-management.dll
+  web: /wait-for.sh postgres 5432 -- dotnet employees-management.dll
